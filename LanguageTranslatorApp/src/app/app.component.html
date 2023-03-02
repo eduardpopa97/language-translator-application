@@ -1,0 +1,137 @@
+<p>
+  <mat-toolbar color="primary">
+    <span>My Web Language Translator Service</span>
+  </mat-toolbar>
+</p>
+
+<br />
+<mat-chip-list>
+  &#10240;&#10240;
+  <mat-chip color="primary" selected>Original text</mat-chip>
+</mat-chip-list>
+
+<div>
+  <br />
+  &#10240;&#10240;
+  <mat-form-field appearance="outline">
+    <mat-label>Select language</mat-label>
+    <mat-select name="lang1" id="lang1" #lang1>
+      <mat-option value="English">English</mat-option>
+      <mat-option value="Spanish">Spanish</mat-option>
+      <mat-option value="Portuguese">Portuguese</mat-option>
+      <mat-option value="French">French</mat-option>
+      <mat-option value="German">German</mat-option>
+      <mat-option value="Japanese">Japanese</mat-option>
+      <mat-option value="Italian">Italian</mat-option>
+      <mat-option value="Swedish">Swedish</mat-option>
+      <mat-option value="Danish">Danish</mat-option>
+      <mat-option value="Hungarian">Hungarian</mat-option>
+      <mat-option value="Turkish">Turkish</mat-option>
+      <mat-option value="Greek">Greek</mat-option>
+      <mat-option value="Romanian">Romanian</mat-option>
+      <mat-option value="Dutch">Dutch</mat-option>
+    </mat-select>
+  </mat-form-field>
+
+  &#10240;&#10240;&#10240;&#10240;&#10240;&#10240;&#10240;&#10240;&#10240;&#10240;&#10240;&#10240;
+  &#10240;&#10240;&#10240;&#10240;&#10240;&#10240;&#10240;&#10240;&#10240;&#10240;&#10240;&#10240;
+  &#10240;&#10240;&#10240;&#10240;&#10240;&#10240;&#10240;&#10240;&#10240;&#10240;&#10240;&#10240;
+  &#10240;&#10240;&#10240;&#10240;&#10240;&#10240;&#10240;&#10240;&#10240;
+
+  <mat-form-field appearance="outline">
+    <mat-label>Select language</mat-label>
+    <mat-select name="lang2" id="lang2" #lang2>
+      <mat-option value="English">English</mat-option>
+      <mat-option value="Spanish">Spanish</mat-option>
+      <mat-option value="Portuguese">Portuguese</mat-option>
+      <mat-option value="French">French</mat-option>
+      <mat-option value="German">German</mat-option>
+      <mat-option value="Japanese">Japanese</mat-option>
+      <mat-option value="Italian">Italian</mat-option>
+      <mat-option value="Swedish">Swedish</mat-option>
+      <mat-option value="Danish">Danish</mat-option>
+      <mat-option value="Hungarian">Hungarian</mat-option>
+      <mat-option value="Turkish">Turkish</mat-option>
+      <mat-option value="Greek">Greek</mat-option>
+      <mat-option value="Romanian">Romanian</mat-option>
+      <mat-option value="Dutch">Dutch</mat-option>
+    </mat-select>
+  </mat-form-field>
+</div>
+
+<br />
+&#10240;&#10240;
+<mat-form-field class="example-full-width" style="width: 600px">
+  <mat-label>Write your text here</mat-label>
+  <textarea
+    matInput
+    style="height: 200px; resize: none"
+    name="text"
+    id="text"
+    #text
+  ></textarea>
+</mat-form-field>
+
+&#10240;&#10240;
+<textarea
+  class="form-control"
+  disabled
+  style="height: 200px; width: 640px; resize: none"
+>{{this.fetchedTranslation}}</textarea>
+
+<br />
+<br />
+
+<mat-chip-list>
+  &#10240;&#10240;
+  <mat-chip
+    color="primary"
+    selected
+    style="margin-top: -797px; margin-left: 634px"
+    >Translated text</mat-chip
+  >
+</mat-chip-list>
+
+<button
+  mat-raised-button
+  color="primary"
+  style="margin-left: 600px"
+  (click)="translate(text.value, lang1.value, lang2.value)"
+>
+  Translate
+</button>
+
+<button
+  mat-raised-button
+  color="primary"
+  style="margin-left: 200px"
+  (click)="speech2(lang2.value)"
+>
+<span class="material-icons">
+campaign
+</span>
+</button>
+
+<button
+  mat-raised-button
+  color="primary"
+  style="margin-left: -600px"
+  (click) = "speech1(text.value,lang1.value)"
+>
+<span class="material-icons">
+campaign
+</span>
+</button>
+
+<br>
+<br>
+&#10240;&#10240;&#10240;&#10240;&#10240;&#10240;&#10240;&#10240;&#10240;&#10240;&#10240;&#10240;
+&#10240;&#10240;&#10240;&#10240;&#10240;&#10240;&#10240;&#10240;&#10240;&#10240;&#10240;
+
+<span style="font-weight:bold;font-style:italic;font-size: 125%;">*you can listen the speeches only in English, German, Spanish, Portuguese, French, Italian, Japanese and Dutch*</span>
+
+
+
+<ngx-alerts></ngx-alerts>
+
+<router-outlet></router-outlet>
