@@ -36,11 +36,11 @@ import com.ibm.watson.text_to_speech.v1.util.WaveUtils;
 @SpringBootApplication
 public class LanguageTranslatorServiceApplication {
 
-	private String apikeyTranslator = "JuQBZdCJDrbvQKKjrMPTkPmhcfdcweMLXKAIRy0QeXjH";
+	private String apikeyTranslator = "XXXXXXXXXXXXXXXXXXXXXXX";
 	private String versionTranslator = "2018-05-01";
 	private String urlTranslator = "https://api.eu-gb.language-translator.watson.cloud.ibm.com";
 	
-	private String apikeySpeech = "IzLSyoXhJjMfsZqGDIxyIVURk3ZfjCkY5AVC5r8b1IUi";
+	private String apikeySpeech = "XXXXXXXXXXXXXXXXXXXXXXX";
 	private String urlSpeech = "https://api.eu-gb.text-to-speech.watson.cloud.ibm.com";
 	
 	public static void main(String[] args) {
